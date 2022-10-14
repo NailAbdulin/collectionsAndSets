@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class EmployeeServiceIml implements EmployeeService {
@@ -18,7 +19,7 @@ public class EmployeeServiceIml implements EmployeeService {
 
     @Override
     public boolean remove(String name, String surname) {
-        Employee forRemove = new Employee(name, surname);
+        Employee forRemove = new Employee(name,surname);
         if (employees.remove(forRemove)) {
             return true;
         }
@@ -38,7 +39,7 @@ public class EmployeeServiceIml implements EmployeeService {
 
     @Override
     public Employee search(String name, String surname) {
-        Employee employeeForSearch = new Employee(name, surname);
+        Employee employeeForSearch = new Employee(name,surname);
         if (employees.contains(employeeForSearch)) {
             return employeeForSearch;
         }

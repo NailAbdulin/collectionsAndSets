@@ -11,3 +11,4 @@ public interface EmployeeService {
     public Employee search(String name, String surname);
     public boolean add(String name, String surname);
 }
+
